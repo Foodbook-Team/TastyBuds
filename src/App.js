@@ -8,8 +8,8 @@ import Page3 from './components/pages/Page3';
 import MediaCard from "./components/MediaCard";
 import Footer from "./components/Footer";
 import Jumbotron from './components/Jumbotron';
-import axios from 'axios'
-
+import axios from 'axios';
+import Recipe from './components/MediaCard';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,7 +26,7 @@ function App() {
 
     // const url = `/api/recipes/v2/?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`;
     const getRecipe = async () => {
-      const response = await axios.get(`/api/recipes/v2/?q=pasta&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`);
+      const response = await axios.get(`/api/recipes/v2/?q=banana&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`);
       // const result = await response.json();
       setRecipe(response.data.hits)
       console.log(response.data.hits);
@@ -48,17 +48,29 @@ function App() {
       </div>
     </Router>
     <Jumbotron />
+
+
 <div className='App'>
 <form>
     <input type="text"/>
     <button type="button">Search</button>
    </form>
-   {count}
+{recipe.map((recipe) => (
+  <Recipe
+   title={recipe.recipe.label}
+   calories={recipe.recipe.calories + " kcal"}
+   image={recipe.recipe.image}
+   ingredients={recipe.recipe.ingredients}
+   />
+))}
+
+
+<Recipe/>
    <button type="button" onClick={getRecipe}>Food searching App</button>
    <button type="button" onClick={() => setCount(count + 1)}>Click</button>
    </div>
 
-    <MediaCard/>
+   
     <Footer /> 
   {/* ----------Finish of container----------------   */}
   </>
