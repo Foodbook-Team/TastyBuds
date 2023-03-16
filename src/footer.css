@@ -64,4 +64,5 @@ li::before{
   text-align: center;
 font-size: 12px;
 padding-bottom: 1px;
+letter-spacing: 0.2em;
 }
