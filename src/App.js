@@ -23,16 +23,16 @@ function App() {
     console.log(result);
 };
 
-return (
-  <div  className='App'>
-      <button onClick={getData}>Food searching App</button>
-  </div>
-)
-return (
-  <div  className='App'>
-      <button onClick={getData}>Food searching App</button>
-  </div>
-)
+// return (
+//   <div  className='App'>
+//       <button onClick={getData}>Food searching App</button>
+//   </div>
+// )
+// return (
+//   <div  className='App'>
+//       <button onClick={getData}>Food searching App</button>
+//   </div>
+// )
 
   return (
 
