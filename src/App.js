@@ -38,7 +38,7 @@ return (
 
   // -------------Start of div container-----------------
   <>
-    <Router basename="Foodbook">
+    <Router basename="">
       <div>        
         <NavTabs />          
           <Routes>
