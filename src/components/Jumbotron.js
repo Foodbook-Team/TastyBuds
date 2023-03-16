@@ -1,8 +1,10 @@
 import React from 'react';
 
 function Jumbotron() {
-return (
+return (<div>    
     <img src="./images/jumbotron.png" alt="jumbotron"></img>
+
+    </div>
 );    
 }
 

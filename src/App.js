@@ -14,14 +14,14 @@ function App() {
   return (
   // -------------Start of div container-----------------
   <>
-    <Router basename="Foodbook">
+    <Router >
       <div>        
         <NavTabs />          
-          <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Page1" element={<Page1 />} />
-          <Route path="/Page2" element={<Page2 />} />
-          <Route path="/Page3" element={<Page3 />} />
+          <Routes basename="Tastybuds">
+          <Route path="/Tastybuds/" element={<Home />} />
+          <Route path="/Tastybuds/Page1" element={<Page1 />} />
+          <Route path="/Tastybuds/Page2" element={<Page2 />} />
+          <Route path="/Tastybuds/Page3" element={<Page3 />} />
         </Routes>        
       </div>
     </Router>

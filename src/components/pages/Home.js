@@ -4,9 +4,7 @@ import React from "react";
 
 function Home() {
   return (
-    <div>
-
-      <h1>Foodbook</h1>
+    <div>    
       
     </div>
     
