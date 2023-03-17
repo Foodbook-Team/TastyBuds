@@ -10,14 +10,16 @@ import Footer from "./components/Footer";
 import Jumbotron from './components/Jumbotron';
 import axios from 'axios';
 import Recipe from './components/MediaCard';
+import './MediaCard.css'
+
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [recipe, setRecipe] = useState([]);
-  
+const [recipe, setRecipe] = useState([]);
+  const [search, setSearch] = useState('');
+  const [query, setQuery] = useState('chicken')
   useEffect(() => {
   getRecipe();
-  },[]);
+  },[query]);
   
 
   const APP_ID = "31e49968"
@@ -26,11 +28,20 @@ function App() {
 
     // const url = `/api/recipes/v2/?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`;
     const getRecipe = async () => {
-      const response = await axios.get(`/api/recipes/v2/?q=banana&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`);
+      const response = await axios.get(`/api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`);
       // const result = await response.json();
       setRecipe(response.data.hits)
       console.log(response.data.hits);
   };
+
+  const updateSearch = (e) => {
+   setSearch(e.target.value)
+  }
+
+  const updateQuery = (e) => {
+    e.preventDefault();
+    setQuery(search);
+  }
 
   return (
 
@@ -50,11 +61,11 @@ function App() {
     <Jumbotron />
 
 
-<div className='App'>
-<form>
-    <input type="text"/>
-    <button type="button">Search</button>
+<form onSubmit={updateQuery}>
+    <input type="text" value={search} onChange={updateSearch}/>
+    <button type="submit">Search</button>
    </form>
+<div className='App'>
 {recipe.map((recipe) => (
   <Recipe
    title={recipe.recipe.label}
@@ -66,9 +77,8 @@ function App() {
 
 
 <Recipe/>
-   <button type="button" onClick={getRecipe}>Food searching App</button>
-   <button type="button" onClick={() => setCount(count + 1)}>Click</button>
    </div>
+   <button type="button" onClick={getRecipe}>Food searching App</button>
 
    
     <Footer /> 
