@@ -2,7 +2,7 @@ import React from 'react';
 
 function Jumbotron() {
 return (
-    <img src="./images/jumbotron.png" alt="jumbotron"></img>
+    <img src="./jfood.jpg" alt="jumbotron"></img>
 );    
 }
 

@@ -38,7 +38,9 @@ function App() {
 
   // -------------Start of div container-----------------
   <>
-    <Router basename="">
+  <NavTabs />
+  
+    {/* <Router basename="">
       <div>        
         <NavTabs />          
           <Routes>
@@ -48,7 +50,7 @@ function App() {
           <Route path="/Page3" element={<Page3 />} />
         </Routes>        
       </div>
-    </Router>
+    </Router> */}
     <Jumbotron />
 
     {/* <MediaCard /> */}
