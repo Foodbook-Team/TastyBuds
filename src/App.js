@@ -11,6 +11,9 @@ import Jumbotron from './components/Jumbotron';
 import axios from 'axios';
 import Recipe from './components/MediaCard';
 import './MediaCard.css'
+import Input from '@mui/material/Input';
+import Quotes from './components/Quotes';
+
 
 
 function App() {
@@ -59,12 +62,16 @@ const [recipe, setRecipe] = useState([]);
       </div>
     </Router>
     <Jumbotron />
-
-
+<div className="input-field">
+    <Quotes/>
 <form onSubmit={updateQuery}>
-    <input type="text" value={search} onChange={updateSearch}/>
-    <button type="submit">Search</button>
+<Input placeholder="Find the best recipes..." type="text" value={search} onChange={updateSearch} />
+    {/* <input type="text" value={search} onChange={updateSearch}/> */}
+    <button className='search-button' type="submit">Search</button>
    </form>
+  </div>
+
+
 <div className='App'>
 {recipe.map((recipe) => (
   <Recipe

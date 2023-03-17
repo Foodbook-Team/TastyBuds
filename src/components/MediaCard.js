@@ -13,23 +13,26 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 
 const Recipe = ({title, calories, image, ingredients}) => {
   return (<>
-    <Card sx={{ maxWidth: 200 }}>
+ 
+    <Card sx={{ maxWidth: 230 }}>
     <CardMedia
       sx={{ height: 140 }}
       image={image}
       title="green iguana"
+      
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
+      <Typography gutterBottom center variant="h8" align="center" component="div">
       {title}
       </Typography>
     </CardContent>
 
-<Accordion>
+<Accordion >
   <AccordionSummary
     // expandIcon={<ExpandMoreIcon />}
     aria-controls="panel1a-content"
     id="panel1a-header"
+   
   >
     <Typography>Ingredients</Typography>
   </AccordionSummary>
