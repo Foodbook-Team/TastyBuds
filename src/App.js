@@ -13,8 +13,8 @@ import Recipe from './components/MediaCard';
 import './MediaCard.css'
 import Input from '@mui/material/Input';
 import Quotes from './components/Quotes';
-
-
+import Button from '@mui/joy/Button';
+import MealType from './components/MealType';
 
 function App() {
 const [recipe, setRecipe] = useState([]);
@@ -67,7 +67,20 @@ const [recipe, setRecipe] = useState([]);
 <form onSubmit={updateQuery}>
 <Input placeholder="Find the best recipes..." type="text" value={search} onChange={updateSearch} />
     {/* <input type="text" value={search} onChange={updateSearch}/> */}
-    <button className='search-button' type="submit">Search</button>
+
+    <Button
+    placeholder="Find the best recipes..."
+  color="primary"
+  value={search}
+  type="text"
+
+  size="sm"
+  variant="outlined"
+  onChange={updateSearch}
+>Search</Button>
+
+
+    {/* <button className='search-button' type="submit">Search</button> */}
    </form>
   </div>
 
@@ -85,10 +98,11 @@ const [recipe, setRecipe] = useState([]);
 
 <Recipe/>
    </div>
-   <button type="button" onClick={getRecipe}>Food searching App</button>
+   {/* <button type="button" onClick={getRecipe}>Food searching App</button> */}
 
    
     <Footer /> 
+    <MealType />
   {/* ----------Finish of container----------------   */}
   </>
 
