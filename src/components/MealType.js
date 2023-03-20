@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './MealType.css'
-
+import ShoppingList from './ShoppingList.js'
 
 
 function MealType() {
@@ -53,7 +53,7 @@ function MealType() {
 </div>
       ))}
       </div>
-    
+      <ShoppingList/>
     </>
     );
   }

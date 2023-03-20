@@ -28,11 +28,9 @@ const [recipe, setRecipe] = useState([]);
   const APP_ID = "31e49968"
   const APP_KEY = "ecdd8eae17634d382403cbce72038924"
 
-
-    // const url = `/api/recipes/v2/?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`;
     const getRecipe = async () => {
       const response = await axios.get(`/api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`);
-      // const result = await response.json();
+
       setRecipe(response.data.hits)
       console.log(response.data.hits);
   };
@@ -66,41 +64,32 @@ const [recipe, setRecipe] = useState([]);
     <Quotes/>
 <form onSubmit={updateQuery}>
 <Input placeholder="Find the best recipes..." type="text" value={search} onChange={updateSearch} />
-    {/* <input type="text" value={search} onChange={updateSearch}/> */}
 
     <Button
     placeholder="Find the best recipes..."
   color="primary"
   value={search}
   type="text"
-
   size="sm"
   variant="outlined"
   onChange={updateSearch}
 >Search</Button>
-
-
-    {/* <button className='search-button' type="submit">Search</button> */}
    </form>
   </div>
 
-
 <div className='App'>
-{recipe.map((recipe) => (
+{recipe && recipe.map((recipe) => (
+  
   <Recipe
    title={recipe.recipe.label}
-   calories={recipe.recipe.calories + " kcal"}
+   calories={recipe.recipe.calories.toFixed(1) + " kcal"}
    image={recipe.recipe.image}
    ingredients={recipe.recipe.ingredients}
+   url={recipe.recipe.url}
    />
 ))}
-
-
 <Recipe/>
    </div>
-   {/* <button type="button" onClick={getRecipe}>Food searching App</button> */}
-
-   
     <Footer /> 
     <MealType />
   {/* ----------Finish of container----------------   */}

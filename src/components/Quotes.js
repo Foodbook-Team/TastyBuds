@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 
+
 const quotes = [
     "How to Spice Up Your Life: Delicious Recipes at Your Fingertips",
     "Satisfy Your Cravings: Explore Our Tasty Recipes!",
@@ -18,9 +19,6 @@ const quotes = [
     "From Our Kitchen to Yours: Explore Our Irresistible Recipes!",
     "Get Ready to Dig In: Find Your New Favorite Recipe Here!",
 ]
-
-
-
     function Quotes() {
         const [randomQuote, setRandomQuote] = useState("");
       
@@ -30,7 +28,7 @@ const quotes = [
         }, []);
 
   return (
-    <div>
+    <div style={{fontSize: "2rem"}}>
       <p>{randomQuote}</p>
     </div>
   );

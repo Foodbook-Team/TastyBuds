@@ -8,12 +8,13 @@ import Typography from '@mui/material/Typography';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-
+import { Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const Recipe = ({title, calories, image, ingredients}) => {
+const Recipe = ({title, calories, image, ingredients, url}) => {
   return (<>
- 
+ <div className='media-card'>
     <Card sx={{ maxWidth: 230 }}>
     <CardMedia
       sx={{ height: 140 }}
@@ -27,9 +28,9 @@ const Recipe = ({title, calories, image, ingredients}) => {
       </Typography>
     </CardContent>
 
-<Accordion >
+<Accordion  >
   <AccordionSummary
-    // expandIcon={<ExpandMoreIcon />}
+   
     aria-controls="panel1a-content"
     id="panel1a-header"
    
@@ -45,13 +46,16 @@ const Recipe = ({title, calories, image, ingredients}) => {
         <br></br>
         {calories}
         <CardActions>
-      <Button size="small">Share</Button>
-      <Button size="small">Learn More</Button>
+      {/* <Button  href="#text-buttons" size="small">Share</Button> */}
+      <BrowserRouter>
+  <Button component={Link} to={url} target="_blank">Try it</Button>
+</BrowserRouter>
     </CardActions>
     </Typography>
   </AccordionDetails>
 </Accordion>
-</Card></>
+</Card>
+</div> </>
     )
   }
 
@@ -61,43 +65,5 @@ export default Recipe
 
 
 
-// export default function SimpleAccordion() {
-//   return (
-//     <div>
-//       <Accordion>
-//         <AccordionSummary
-//           expandIcon={<ExpandMoreIcon />}
-//           aria-controls="panel1a-content"
-//           id="panel1a-header"
-//         >
-//           <Typography>Accordion 1</Typography>
-//         </AccordionSummary>
-//         <AccordionDetails>
-//           <Typography>
-//             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-//             malesuada lacus ex, sit amet blandit leo lobortis eget.
-//           </Typography>
-//         </AccordionDetails>
-//       </Accordion>
-      
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-{/* <div>
-    <p>{title}</p>
-    <p>{calories}</p>
-    
-    <img src={image} alt=""/>
-    <ol>
-      {ingredients && ingredients.map((ingredient) => (
-<li style={{color: "black"}}>{ingredient.text}</li>
-    ))}</ol>
-    </div> */}
 
     
