@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 
-const Recipe = ({title, calories, image, ingredients, url}) => {
+const Recipe = ({title, calories, image, ingredients, url, dishType, dietLabels, cuisineType}) => {
 
   return (<>
  <div className='media-card'>
@@ -26,7 +26,13 @@ const Recipe = ({title, calories, image, ingredients, url}) => {
     />
     <CardContent>
       <Typography gutterBottom center variant="h8" align="center" component="div">
-      {title}
+      <h1 style={{fontSize: "1.3rem"}}> {title}</h1>
+      <br></br>
+      <p style={{fontSize: "1rem", margin: "2px", display: "flex", justifyContent: "space-around"}}>
+      {dishType}
+        <br></br>
+        {dietLabels}
+        </p>
       </Typography>
     </CardContent>
 
@@ -47,7 +53,9 @@ const Recipe = ({title, calories, image, ingredients, url}) => {
 <li style={{color: "black"}}>{ingredient.text}</li>
     ))}</ol>
         <br></br>
-        {calories}
+        Calories: {calories}
+        <br></br>
+  Cuisine type: {cuisineType}
         <CardActions>
      
       <BrowserRouter>

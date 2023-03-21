@@ -16,7 +16,7 @@ import Quotes from './components/Quotes';
 import Button from '@mui/joy/Button';
 import MealType from './components/MealType';
 import Iframe from './components/Iframe.js'
-
+import CuisineList from './components/CuisineType.js'
 
 function App() {
 const [recipe, setRecipe] = useState([]);
@@ -85,20 +85,27 @@ const [recipe, setRecipe] = useState([]);
   
   <Recipe
    title={recipe.recipe.label}
-   calories={recipe.recipe.calories.toFixed(1) + " kcal"}
+   calories={recipe.recipe.calories.toFixed(1)}
    image={recipe.recipe.image}
    ingredients={recipe.recipe.ingredients}
    url={recipe.recipe.url}
+   dishType={recipe.recipe.dishType}
+ dietLabels={recipe.recipe.dietLabels}
+ cuisineType={recipe.recipe.cuisineType}
    />
 ))}
 
    </div>
+
+   <CuisineList />
     <Footer /> 
     <MealType />
     
     <Iframe 
    
     />
+    <CuisineList/>
+   
   {/* ----------Finish of container----------------   */}
   </>
 
