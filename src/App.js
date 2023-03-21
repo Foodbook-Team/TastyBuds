@@ -75,12 +75,13 @@ const [recipe, setRecipe] = useState([]);
   size="sm"
   variant="outlined"
   onChange={updateSearch}
+  sx={{ marginLeft: '8px'}}
 >Search</Button>
    </form>
   </div>
 
 <div className='App'>
-{recipe && recipe.map((recipe) => (
+{recipe && recipe.slice(0, 9).map((recipe) => (
   
   <Recipe
    title={recipe.recipe.label}
@@ -90,7 +91,7 @@ const [recipe, setRecipe] = useState([]);
    url={recipe.recipe.url}
    />
 ))}
-<Recipe/>
+
    </div>
     <Footer /> 
     <MealType />

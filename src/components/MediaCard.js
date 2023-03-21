@@ -4,13 +4,13 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Accordion from '@mui/material/Accordion';
+import Typography from '@mui/material/Typography';
+
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
-// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 const Recipe = ({title, calories, image, ingredients, url}) => {
@@ -38,6 +38,7 @@ const Recipe = ({title, calories, image, ingredients, url}) => {
    
   >
     <Typography>Ingredients</Typography>
+ 
   </AccordionSummary>
   <AccordionDetails>
     <Typography>
@@ -48,7 +49,7 @@ const Recipe = ({title, calories, image, ingredients, url}) => {
         <br></br>
         {calories}
         <CardActions>
-      {/* <Button  href="#text-buttons" size="small">Share</Button> */}
+     
       <BrowserRouter>
   <Button component={Link} to={url} target="_blank">Recipe</Button>
 </BrowserRouter>
