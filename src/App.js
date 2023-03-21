@@ -15,16 +15,18 @@ import Input from '@mui/material/Input';
 import Quotes from './components/Quotes';
 import Button from '@mui/joy/Button';
 import MealType from './components/MealType';
+import Iframe from './components/Iframe.js'
+
 
 function App() {
 const [recipe, setRecipe] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('chicken')
+  const [query, setQuery] = useState('chicken');
+
   useEffect(() => {
   getRecipe();
   },[query]);
   
-
   const APP_ID = "31e49968"
   const APP_KEY = "ecdd8eae17634d382403cbce72038924"
 
@@ -92,6 +94,10 @@ const [recipe, setRecipe] = useState([]);
    </div>
     <Footer /> 
     <MealType />
+    
+    <Iframe 
+   
+    />
   {/* ----------Finish of container----------------   */}
   </>
 

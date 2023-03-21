@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -12,7 +12,9 @@ import { Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+
 const Recipe = ({title, calories, image, ingredients, url}) => {
+
   return (<>
  <div className='media-card'>
     <Card sx={{ maxWidth: 230 }}>
@@ -48,7 +50,7 @@ const Recipe = ({title, calories, image, ingredients, url}) => {
         <CardActions>
       {/* <Button  href="#text-buttons" size="small">Share</Button> */}
       <BrowserRouter>
-  <Button component={Link} to={url} target="_blank">Try it</Button>
+  <Button component={Link} to={url} target="_blank">Recipe</Button>
 </BrowserRouter>
     </CardActions>
     </Typography>
