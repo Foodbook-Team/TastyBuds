@@ -1,22 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NavTabs from './components/NavTabs';
-import Home from './components/pages/Home';
-import Page1 from './components/pages/Page1';
-import Page2 from './components/pages/Page2';
-import Page3 from './components/pages/Page3';
-import MediaCard from "./components/MediaCard";
 import Footer from "./components/Footer";
-import Jumbotron from './components/Jumbotron';
 import axios from 'axios';
 import Recipe from './components/MediaCard';
 import './MediaCard.css'
 import Input from '@mui/material/Input';
 import Quotes from './components/Quotes';
 import Button from '@mui/joy/Button';
-import MealType from './components/MealType';
-import Iframe from './components/Iframe.js'
 import CuisineList from './components/CuisineType.js'
+import ShoppingList from './components/ShoppingList.js'
 
 function App() {
 const [recipe, setRecipe] = useState([]);
@@ -50,18 +41,7 @@ const [recipe, setRecipe] = useState([]);
 
   // -------------Start of div container-----------------
   <>
-    <Router basename="">
-      <div>        
-        <NavTabs />          
-          <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Page1" element={<Page1 />} />
-          <Route path="/Page2" element={<Page2 />} />
-          <Route path="/Page3" element={<Page3 />} />
-        </Routes>        
-      </div>
-    </Router>
-    <Jumbotron />
+
 <div className="input-field">
     <Quotes/>
 <form onSubmit={updateQuery}>
@@ -98,14 +78,8 @@ const [recipe, setRecipe] = useState([]);
    </div>
 
    <CuisineList />
+  <ShoppingList/>
     <Footer /> 
-    <MealType />
-    
-    <Iframe 
-   
-    />
-    <CuisineList/>
-   
   {/* ----------Finish of container----------------   */}
   </>
 

@@ -24,6 +24,7 @@ function ShoppingList() {
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
+        <h1>Shopping list</h1>
         <input type="text" value={inputValue} onChange={handleInputChange} />
         <button type="submit">Add</button>
       </form>
