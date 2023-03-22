@@ -8,7 +8,8 @@ import Page3 from './components/pages/Page3';
 import MediaCard from "./components/MediaCard";
 import Footer from "./components/Footer";
 import Jumbotron from './components/Jumbotron';
-
+import CustomNavbar from './components/CustomNavbar';
+import Body from './components/Body';
 
 function App() {
 
@@ -38,7 +39,9 @@ function App() {
 
   // -------------Start of div container-----------------
   <>
-    <Router basename="">
+<CustomNavbar/>
+<Body/>
+    {/* <Router basename="">
       <div>        
         <NavTabs />          
           <Routes>
@@ -48,8 +51,8 @@ function App() {
           <Route path="/Page3" element={<Page3 />} />
         </Routes>        
       </div>
-    </Router>
-    <Jumbotron />
+    </Router> */}
+    {/* <Jumbotron /> */}
 
     {/* <MediaCard /> */}
     <Footer /> 
