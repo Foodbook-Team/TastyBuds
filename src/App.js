@@ -1,64 +1,99 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NavTabs from './components/NavTabs';
-import Home from './components/pages/Home';
-import Page1 from './components/pages/Page1';
-import Page2 from './components/pages/Page2';
-import Page3 from './components/pages/Page3';
-import MediaCard from "./components/MediaCard";
+import React, {useEffect, useState} from 'react';
 import Footer from "./components/Footer";
+
+import axios from 'axios';
+import Recipe from './components/MediaCard';
+import './MediaCard.css'
+import Input from '@mui/material/Input';
+import Quotes from './components/Quotes';
+import Button from '@mui/joy/Button';
+import CuisineList from './components/CuisineType.js'
+import ShoppingList from './components/ShoppingList.js'
+
 import Jumbotron from './components/Jumbotron';
 import CustomNavbar from './components/CustomNavbar';
 import Body from './components/Body';
-import Video from './components/Video';
+import Video from './components/Video'
 
 function App() {
+const [recipe, setRecipe] = useState([]);
+  const [search, setSearch] = useState('');
+  const [query, setQuery] = useState('chicken');
 
+  useEffect(() => {
+  getRecipe();
+  },[query]);
+  
   const APP_ID = "31e49968"
   const APP_KEY = "ecdd8eae17634d382403cbce72038924"
-  
-  const url = `/api/recipes/v2/?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`;
 
-  const getData = async () => {
-    const response = await fetch(url);
-    const result = await response.json();
-    console.log(result);
-};
+    const getRecipe = async () => {
+      const response = await axios.get(`/api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`);
 
-// return (
-//   <div  className='App'>
-//       <button onClick={getData}>Food searching App</button>
-//   </div>
-// )
-// return (
-//   <div  className='App'>
-//       <button onClick={getData}>Food searching App</button>
-//   </div>
-// )
+      setRecipe(response.data.hits)
+      console.log(response.data.hits);
+  };
+
+  const updateSearch = (e) => {
+   setSearch(e.target.value)
+  }
+
+  const updateQuery = (e) => {
+    e.preventDefault();
+    setQuery(search);
+  }
 
   return (
 
   // -------------Start of div container-----------------
   <>
+
+
+<div className="input-field">
+    <Quotes/>
+<form onSubmit={updateQuery}>
+<Input placeholder="Find the best recipes..." type="text" value={search} onChange={updateSearch} />
+
+    <Button
+    placeholder="Find the best recipes..."
+  color="primary"
+  value={search}
+  type="text"
+  size="sm"
+  variant="outlined"
+  onChange={updateSearch}
+  sx={{ marginLeft: '8px'}}
+>Search</Button>
+   </form>
+  </div>
+
+<div className='App'>
+{recipe && recipe.slice(0, 9).map((recipe) => (
+
 <CustomNavbar/>
 <Video/>
 <Body/>
-    {/* <Router basename="">
-      <div>        
-        <NavTabs />          
-          <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Page1" element={<Page1 />} />
-          <Route path="/Page2" element={<Page2 />} />
-          <Route path="/Page3" element={<Page3 />} />
-        </Routes>        
-      </div>
-    </Router> */}
-    {/* <Jumbotron /> */}
-
-    {/* <MediaCard /> */}
+    
     <Footer /> 
+
   
+  <Recipe
+   title={recipe.recipe.label}
+   calories={recipe.recipe.calories.toFixed(1)}
+   image={recipe.recipe.image}
+   ingredients={recipe.recipe.ingredients}
+   url={recipe.recipe.url}
+   dishType={recipe.recipe.dishType}
+ dietLabels={recipe.recipe.dietLabels}
+ cuisineType={recipe.recipe.cuisineType}
+   />
+))}
+
+   </div>
+
+   <CuisineList />
+  <ShoppingList/>
+    <Footer /> 
   {/* ----------Finish of container----------------   */}
   </>
 
