@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Jumbotron from './components/Jumbotron';
 import CustomNavbar from './components/CustomNavbar';
 import Body from './components/Body';
+import Video from './components/Video';
 
 function App() {
 
