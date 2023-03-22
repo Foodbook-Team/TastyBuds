@@ -41,6 +41,7 @@ function App() {
   // -------------Start of div container-----------------
   <>
 <CustomNavbar/>
+<Video/>
 <Body/>
     {/* <Router basename="">
       <div>        
