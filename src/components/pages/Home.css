@@ -1,24 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.HomeCard{
-background-color: grey;
-color: white;
-display: flex;
-align-items: center;
-border: 3px;
-border-color: black;
-box-shadow: 7px 5px 30px rgba(0, 0, 0, 0.485);
-border-radius: 50px;
 
+.card{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2) 100%);
+    /* color: white; */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* align-items: center; */
+    border: 3px;
+    border-color: black;
+    box-shadow: 7px 5px 30px rgba(0, 0, 0, 0.485);
+    border-radius: 50px;
+    margin: 20px;
 }
 
-.HomeCardImg{
+.card--row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+.card--description{
+    flex: 1;
+}
+
+.card--img {
     display: flex;
     border-radius: 50px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.485);  
-   
+    margin: 1%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.485);
+
 }
 
-a{
+a {
     text-decoration: none;
 }
 
+
+@media only screen and (max-width: 770px) {
+    /* .card--row {
+      flex-direction: row-reverse;
+    } */
+    
+    .card--img {
+      max-width: 50%;
+    }
+    
+    .card--description {
+      flex: 2;
+    }
+  }

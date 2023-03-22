@@ -6,9 +6,10 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
 import Item from '@mui/material/ListItem'
 import { CardActionArea } from '@mui/material';
-import axios from "axios"
-import bootstrap from "bootstrap"
+import axios from 'axios';
+import bootstrap from "bootstrap";
 import './Home.css'
+import VanillaTilt from 'vanilla-tilt';
 
 
 
@@ -24,7 +25,7 @@ export default function Home() {
       setMealOfDay(result.data.hits[0].recipe.label);
       setMealOfDayImage(result.data.hits[0].recipe.images.LARGE.url)
       setLink(result.data.hits[0].recipe.images.url)
-      
+
     }
 
     MealOfDay();
@@ -32,21 +33,25 @@ export default function Home() {
   }, []);
 
   return (
-    <>    
-    <div className="HomeCard">
-    
-    <img src={`${mealOfDayImage}`} className="HomeCardImg"></img>
-    <h1>Feel inspired by</h1>
-    <a href={`${link}`}><h2>{mealOfDay}</h2></a>
-    </div>
+    <>
+      <div className="card" data-tilt>
+        <div className="card--row">
+
+          <img src={`${mealOfDayImage}`} className="card--img"></img>
+          <div className='card--description'>
+            <h1>Feel inspired by</h1>
+            <a href={`${link}`}><h2>{mealOfDay}</h2></a>
+          </div>
+        </div>
+      </div>
       {/* <Grid container 
             spacing={2}           
             direction="row"
             justifyContent="center"
             alignItems="center" > */}
-            
-        
-          {/* <Card className="InnitialDisplay" sx={{ maxWidth: 345 }} >
+
+
+      {/* <Card className="InnitialDisplay" sx={{ maxWidth: 345 }} >
             <CardActionArea>
               <CardMedia
                 height="100%"
@@ -61,14 +66,14 @@ export default function Home() {
                 {/* <Typography variant="body2" color="text.secondary">
             Description of dish
           </Typography> */}
-              {/* </CardContent>
+      {/* </CardContent>
             </CardActionArea> */}
-          {/* </Card> */}
+      {/* </Card> */}
 
 
-        
 
-      {/* </Grid> */} 
+
+      {/* </Grid> */}
 
 
     </>
