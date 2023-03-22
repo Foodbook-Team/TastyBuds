@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Footer from "./components/Footer";
+
 import axios from 'axios';
 import Recipe from './components/MediaCard';
 import './MediaCard.css'
@@ -8,6 +9,11 @@ import Quotes from './components/Quotes';
 import Button from '@mui/joy/Button';
 import CuisineList from './components/CuisineType.js'
 import ShoppingList from './components/ShoppingList.js'
+
+import Jumbotron from './components/Jumbotron';
+import CustomNavbar from './components/CustomNavbar';
+import Body from './components/Body';
+import Video from './components/Video'
 
 function App() {
 const [recipe, setRecipe] = useState([]);
@@ -42,6 +48,7 @@ const [recipe, setRecipe] = useState([]);
   // -------------Start of div container-----------------
   <>
 
+
 <div className="input-field">
     <Quotes/>
 <form onSubmit={updateQuery}>
@@ -62,6 +69,13 @@ const [recipe, setRecipe] = useState([]);
 
 <div className='App'>
 {recipe && recipe.slice(0, 9).map((recipe) => (
+
+<CustomNavbar/>
+<Video/>
+<Body/>
+    
+    <Footer /> 
+
   
   <Recipe
    title={recipe.recipe.label}

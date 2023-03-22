@@ -1,0 +1,13 @@
+.bodypic {
+  margin-top: 20px;
+  width: 900px;
+  height: 100%;
+  margin: auto;
+  /* border: 2px solid grey; */
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.dummybody {
+  width: 900px;
+  /* background-color: blueviolet; */
+  margin: auto;
+}
