@@ -27,7 +27,7 @@ const Recipe = ({ title, calories, image, ingredients, url, dishType, dietLabels
             title="Food image"
 
           />
-          <CardContent sx={{minHeight: 200}}>
+          <CardContent sx={{minHeight: 225}}>
             <Typography gutterBottom center variant="h8" align="center" component="div">
               <h1 style={{ fontSize: "1.3rem" }}> {title}</h1>
               <br></br>
