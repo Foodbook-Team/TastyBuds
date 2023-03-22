@@ -1,59 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import Footer from "./components/Footer";
-import axios from 'axios';
-import Recipe from './components/MediaCard';
 import './MediaCard.css'
 import Input from '@mui/material/Input';
 import Quotes from './components/Quotes';
 import Button from '@mui/joy/Button';
 import CuisineList from './components/CuisineType.js'
 import ShoppingList from './components/ShoppingList.js'
-import Jumbotron from './components/Jumbotron';
 import CustomNavbar from './components/CustomNavbar';
 import Body from './components/Body';
 import Video from './components/Video'
+import Home from'./components/Home';
 
 function App() {
-  const [recipe, setRecipe] = useState([]);
-  const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('chicken');
-
-  useEffect(() => {
-    getRecipe();
-  }, [query]);
-
-  const APP_ID = "31e49968"
-  const APP_KEY = "ecdd8eae17634d382403cbce72038924"
-
-  const getRecipe = async () => {
-    const response = await axios.get(`/api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`);
-
-    setRecipe(response.data.hits)
-    console.log(response.data.hits);
-  };
-
-  const updateSearch = (e) => {
-    setSearch(e.target.value)
-  }
-
-  const updateQuery = (e) => {
-    e.preventDefault();
-    setQuery(search);
-  }
-
+  
   return (
 
     // -------------Start of div container-----------------
     <>
 
-      <div className="input-field">
+      {/* <div className="input-field"> */}
         <Quotes />
         <CustomNavbar />
         <Video />
-        <form onSubmit={updateQuery}>
-          <Input placeholder="Find the best recipes..." type="text" value={search} onChange={updateSearch} />
+        {/* <form onSubmit={updateQuery}>
+          <Input placeholder="Find the best recipes..." type="text" value={search} onChange={updateSearch} /> */}
 
-          <Button
+          {/* <Button
             placeholder="Find the best recipes..."
             color="primary"
             value={search}
@@ -64,26 +36,10 @@ function App() {
             sx={{ marginLeft: '8px' }}
           >Search</Button>
         </form>
-      </div>
-
-      <div className='App'>
-        {recipe && recipe.slice(0, 9).map((recipe) => (
-
-          <Recipe
-            title={recipe.recipe.label}
-            calories={recipe.recipe.calories.toFixed(1)}
-            image={recipe.recipe.image}
-            ingredients={recipe.recipe.ingredients}
-            url={recipe.recipe.url}
-            dishType={recipe.recipe.dishType}
-            dietLabels={recipe.recipe.dietLabels}
-            cuisineType={recipe.recipe.cuisineType}
-          />
-        ))}
-
-      </div>
+      </div>       */}
 
       <CuisineList />
+      <Home></Home>
       <ShoppingList />
       <Footer />
       {/* ----------Finish of container----------------   */}
