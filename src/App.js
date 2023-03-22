@@ -42,7 +42,7 @@ function App() {
   <>
 <CustomNavbar/>
 <Video/>
-<Body/>
+<Home/>
     {/* <Router basename="">
       <div>        
         <NavTabs />          
