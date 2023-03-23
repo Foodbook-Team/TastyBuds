@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import "./CustomNavbar.css";
-
+import logo from '../assets/logo.png'
 const CustomNavbar = () => {
   const menuItems = [
     {
@@ -47,7 +47,7 @@ const CustomNavbar = () => {
     <Navbar expand="lg" className="custom-navbar navbar-dark">
       <Container>
         <Navbar.Brand href="#">
-          <img src="6.png" alt="Logo" className="brand-logo" /> Tasty Buds
+          <img src = {logo} alt="Logo" className="brand-logo"/> Tasty Buds
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
