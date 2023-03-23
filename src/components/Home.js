@@ -4,7 +4,7 @@ import axios from 'axios';
 import Recipe from '../components/MediaCard';
 import Button from '@mui/joy/Button';
 import Input from '@mui/material/Input';
-import Tilt from 'react-vanilla-tilt';
+// import Tilt from 'react-vanilla-tilt';
 
 function Home() {
   const [recipe, setRecipe] = useState([]);
