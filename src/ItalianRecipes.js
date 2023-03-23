@@ -51,7 +51,7 @@ of culinary experiences that captivate the palate.</p>
 </div>
 </div>
       <div className="cardContainer">
-      {recipes.slice(0, 2).map((recipe) => (
+      {recipes.slice(0, 4).map((recipe) => (
         <Card key={recipe.recipe.uri} sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
