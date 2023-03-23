@@ -80,6 +80,7 @@ const CustomNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {menuItems.map((menu, index) => (
+
             <NavDropdown
             key={index}
             title={menu.title}
@@ -88,6 +89,7 @@ const CustomNavbar = () => {
             onMouseLeave={() => setActiveMenu(null)}
             show={activeMenu === index}
           >
+
                 {menu.items.map((item, idx) => (
                   <NavDropdown.Item 
                   key={idx} 
@@ -100,6 +102,9 @@ const CustomNavbar = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
+
+
+      
     </Navbar>
   );
 };
