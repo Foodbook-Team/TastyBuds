@@ -1,9 +1,10 @@
 import React from "react";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Recipe from '../components/MediaCard';
 import Button from '@mui/joy/Button';
 import Input from '@mui/material/Input';
+import Tilt from 'react-vanilla-tilt';
 
 function Home() {
   const [recipe, setRecipe] = useState([]);
@@ -35,8 +36,10 @@ function Home() {
 
   return (
     <>
-    <div className="input-field">
-    <form onSubmit={updateQuery}>
+    <h1>Check out great {query} recepies:</h1>
+      <hr></hr>
+      <div className="input-field">
+        <form onSubmit={updateQuery}>
           <Input placeholder="Find the best recipes..." type="text" value={search} onChange={updateSearch} />
           <Button
             placeholder="Find the best recipes..."
@@ -48,6 +51,7 @@ function Home() {
             onChange={updateSearch}
             sx={{ marginLeft: '8px' }}
           >Search</Button>
+
            </form>
       </div>   
       
@@ -64,6 +68,7 @@ function Home() {
             dietLabels={recipe.recipe.dietLabels}
             cuisineType={recipe.recipe.cuisineType}
           />
+
         ))}
       </div>
     </>

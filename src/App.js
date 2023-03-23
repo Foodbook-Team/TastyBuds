@@ -12,7 +12,7 @@ import Greek from './GreekRecipes.js'
 import KitchenCard from './KitchenCard';
 
 function App() {
-  
+
   return (
     <>
         <Quotes />
