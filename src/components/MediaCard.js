@@ -6,14 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Accordion from '@mui/material/Accordion';
 import Typography from '@mui/material/Typography';
-import Home from './Home';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { minHeight } from '@mui/system';
-
-
 
 const Recipe = ({ title, calories, image, ingredients, url, dishType, dietLabels, cuisineType }) => {
 

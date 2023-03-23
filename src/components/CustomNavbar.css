@@ -34,3 +34,7 @@
     display: block;
   }
 }
+
+.navbar-dark .nav-item .nav-link {
+  background-color: transparent !important;
+}

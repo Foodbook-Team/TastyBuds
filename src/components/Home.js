@@ -5,7 +5,6 @@ import Recipe from '../components/MediaCard';
 import Button from '@mui/joy/Button';
 import Input from '@mui/material/Input';
 
-
 function Home() {
   const [recipe, setRecipe] = useState([]);
   const [search, setSearch] = useState('');
@@ -51,10 +50,9 @@ function Home() {
           >Search</Button>
            </form>
       </div>   
-
+      
       <div className='App'>
         {recipe && recipe.slice(0, 9).map((recipe) => (
-
           <Recipe
             title={recipe.recipe.label}
             calories={recipe.recipe.calories.toFixed(1)}
@@ -66,11 +64,8 @@ function Home() {
             cuisineType={recipe.recipe.cuisineType}
           />
         ))}
-
       </div>
-
     </>
-
   );
 }
 

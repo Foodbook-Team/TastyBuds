@@ -4,7 +4,7 @@ import "./Body.css";
 const Body = () => {
   return (
     <div className="dummybody">
-      <img src="./contentpic.png" className="bodypic"></img>
+      <img src="./contentpic.png" className="bodypic" alt="chopping board with vegetables"></img>
     </div>
   );
 };

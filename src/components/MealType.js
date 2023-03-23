@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import './MealType.css'
 import ShoppingList from './ShoppingList.js'
 
-
 function MealType() {
     const [mealType, setMealType] = useState(''); // state for meal type
     const [recipes, setRecipes] = useState([]);

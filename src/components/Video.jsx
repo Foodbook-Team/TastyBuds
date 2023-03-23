@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import video1 from "../assets/video8.mp4";
 import "./Video.css";
 import { motion } from "framer-motion";
