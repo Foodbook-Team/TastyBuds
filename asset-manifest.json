@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/TastyBuds/static/css/main.87f2223e.css",
+    "main.js": "/TastyBuds/static/js/main.4d2ad8ac.js",
+    "static/media/video8.mp4": "/TastyBuds/static/media/video8.347626fe6e60963c6717.mp4",
+    "index.html": "/TastyBuds/index.html",
+    "main.87f2223e.css.map": "/TastyBuds/static/css/main.87f2223e.css.map",
+    "main.4d2ad8ac.js.map": "/TastyBuds/static/js/main.4d2ad8ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87f2223e.css",
+    "static/js/main.4d2ad8ac.js"
+  ]
+}
