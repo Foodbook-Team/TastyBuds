@@ -11,7 +11,7 @@ import Edemam from '../assets/Edemam.png';
 
 
 const Footer = () => {
-  const technologies = ['React',,'Bootstrap','React-Bootstrap','Edemam API','Material UI', 'JavaScript', 'CSS', 'HTML','Framer'];
+  const technologies = ['React',,'Bootstrap','React-Bootstrap','Tidio Chatbot','Edemam API','Material UI', 'JavaScript', 'CSS', 'HTML','Framer'];
   const developers = [
     { name: 'Mariusz Ruczkowski', role: 'Frontend Developer' },
     { name: 'Wlodzimierz Maciaszczyk', role: 'Frontend Developer' },
