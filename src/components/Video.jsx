@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import video1 from "../assets/video8.mp4";
 import "./Video.css";
 import { motion } from "framer-motion";
@@ -16,7 +16,7 @@ const Video = () => {
         src={video1}
         type="video/mp4"
         width="1260px"
-        autoplay=""
+        autoPlay={true}
         loop
         muted
       />
@@ -29,10 +29,12 @@ const Video = () => {
         rotate={{}}
         transition={{ delay: 0.5 }}
       >
-        <p className="welcome">Welcome</p>
-        <p id="para">To Tasty Buds</p>
-        <p id="para3">The No.1 website for recipes and meal ideas</p>
-        <p id="para2">A heaven for your taste buds</p>
+        <div className="welcome">
+        <p >Welcome</p>
+        <p >To Tasty Buds</p>
+        <p >The No.1 website for recipes and meal ideas</p>
+        <p >A heaven for your taste buds</p>
+        </div>
       </motion.div>
     </motion.div>
   );

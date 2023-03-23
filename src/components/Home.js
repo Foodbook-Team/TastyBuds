@@ -6,7 +6,6 @@ import Button from '@mui/joy/Button';
 import Input from '@mui/material/Input';
 import Tilt from 'react-vanilla-tilt';
 
-
 function Home() {
   const [recipe, setRecipe] = useState([]);
   const [search, setSearch] = useState('');
@@ -52,30 +51,27 @@ function Home() {
             onChange={updateSearch}
             sx={{ marginLeft: '8px' }}
           >Search</Button>
-        </form>
-      </div>
+
+           </form>
+      </div>   
       
       <div className='App'>
-        {recipe && recipe.slice(0, 9).map((recipe) => (
-          <Tilt>
-            <Recipe
-              title={recipe.recipe.label}
-              calories={recipe.recipe.calories.toFixed(1)}
-              image={recipe.recipe.image}
-              ingredients={recipe.recipe.ingredients}
-              url={recipe.recipe.url}
-              dishType={recipe.recipe.dishType}
-              dietLabels={recipe.recipe.dietLabels}
-              cuisineType={recipe.recipe.cuisineType}
-              query={query}
-            />
-          </Tilt>
+        {recipe && recipe.slice(0, 9).map((recipe, index ) => (
+          <Recipe
+          key={index}
+            title={recipe.recipe.label}
+            calories={recipe.recipe.calories.toFixed(1)}
+            image={recipe.recipe.image}
+            ingredients={recipe.recipe.ingredients}
+            url={recipe.recipe.url}
+            dishType={recipe.recipe.dishType}
+            dietLabels={recipe.recipe.dietLabels}
+            cuisineType={recipe.recipe.cuisineType}
+          />
+
         ))}
-
       </div>
-
     </>
-
   );
 }
 

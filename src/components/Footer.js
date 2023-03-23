@@ -18,7 +18,6 @@ const Footer = () => {
     { src: './js.webp', alt: 'JS' },
     { src: './html.svg.png', alt: 'HTML' },
     { src: './bs.svg.png', alt: 'Bootstrap' },
-    { src: './ChatGPT.svg', alt: 'ChatGPT' },
     { src: './framer.webp', alt: 'Framer' },
     { src: './react.webp', alt: 'HTML' },
   ];
@@ -76,22 +75,4 @@ export default Footer;
 
 
 
-
-
-// import React from "react";
-
-// function Footer() {
-//     return (
-//     <footer>       
-
-
-//     </footer>
-
-
-//     );
-    
-// }
-
-
-// export default Footer;
 
