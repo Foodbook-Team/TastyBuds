@@ -56,8 +56,8 @@ const CustomNavbar = () => {
               <NavDropdown
                 key={index}
                 title={menu.title}
-                id={`dropdown-${index}`}
-              >
+                id={`dropdown-${index}`}>
+
                 {menu.items.map((item, idx) => (
                   <NavDropdown.Item key={idx} href="#">
                     {item}
@@ -68,6 +68,9 @@ const CustomNavbar = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
+
+
+      
     </Navbar>
   );
 };
