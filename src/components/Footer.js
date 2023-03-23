@@ -1,14 +1,17 @@
 import React from 'react';
 // import  from './assets/';
-import JS from '../assets/html.svg.png';
-// import  from './assets/';
-// import  from './assets/';
-// import  from './assets/';
-// import  from './assets/';
+import HTML from '../assets/html.svg.png';
+import JS from '../assets/js.webp';
+import react from '../assets/react.webp';
+import reactBS from '../assets/reactBS.png';
+import Framer from '../assets/framer.webp';
+import Material from '../assets/MaterialUI.png';
+import Tidio from '../assets/tidio.png';
+import Edemam from '../assets/Edemam.png';
 
 
 const Footer = () => {
-  const technologies = ['React', 'JavaScript', 'CSS', 'HTML','Framer','Bootstrap'];
+  const technologies = ['React',,'Bootstrap','React-Bootstrap','Edemam API','Material UI', 'JavaScript', 'CSS', 'HTML','Framer'];
   const developers = [
     { name: 'Mariusz Ruczkowski', role: 'Frontend Developer' },
     { name: 'Wlodzimierz Maciaszczyk', role: 'Frontend Developer' },
@@ -20,7 +23,7 @@ const Footer = () => {
     phone: '+1 (123) 456-7890',
   };
   const logos = [
-    { src: {JS}, alt: 'JS' },
+    { src: '', alt: 'JS' },
     { src: './html.svg.png', alt: 'HTML' },
     { src: './bs.svg.png', alt: 'Bootstrap' },
     { src: './framer.webp', alt: 'Framer' },
@@ -60,9 +63,18 @@ const Footer = () => {
       <div className="column">
         <h6>Logos</h6>
         <div className="logo-container">
-          {logos.map((logo, i) => (
+          <img src= {HTML} className="logo"/>
+          <img src= {JS} className="logo"/>
+          <img src= {react} className="logo"/>
+          <img src= {reactBS} className="logo"/>
+          <img src= {Framer} className="logo"/>
+          <img src= {Material} className="logo"/>
+          <img src= {Tidio} className="logo"/>
+          <img src= {Edemam} className="logo"/>
+          {/* <img src= {JS} className="logo"/> */}
+          {/* {logos.map((logo, i) => (
             <img key={i} src={logo.src} alt={logo.alt} className="logo" />
-          ))}
+          ))} */}
         </div>
       </div>
     </footer>
