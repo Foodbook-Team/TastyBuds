@@ -1,5 +1,10 @@
 import React from 'react';
-
+// import  from './assets/';
+import JS from '../assets/html.svg.png';
+// import  from './assets/';
+// import  from './assets/';
+// import  from './assets/';
+// import  from './assets/';
 
 
 const Footer = () => {
@@ -15,7 +20,7 @@ const Footer = () => {
     phone: '+1 (123) 456-7890',
   };
   const logos = [
-    { src: './js.webp', alt: 'JS' },
+    { src: {JS}, alt: 'JS' },
     { src: './html.svg.png', alt: 'HTML' },
     { src: './bs.svg.png', alt: 'Bootstrap' },
     { src: './framer.webp', alt: 'Framer' },
