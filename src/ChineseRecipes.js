@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import "./components/ChineseRecipe.css";
 import { makeStyles } from "@material-ui/core/styles";
+import ChinesePic from './assets/Chinese.jpg';
 
 const useStyles = makeStyles({
   listItem: {
@@ -37,7 +38,7 @@ function Chinese() {
         <div className="card mb-3" style={{ width: "50%" }}>
           <img
             className="card-img-top"
-            src="./Chinese.jpg"
+            src= {ChinesePic}
             alt="Card image cap"
           ></img>
           <div className="card-body">

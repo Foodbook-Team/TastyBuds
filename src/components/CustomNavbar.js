@@ -1,7 +1,10 @@
 import React, {useState} from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import "./CustomNavbar.css";
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.png';
+
+
+
 const CustomNavbar = () => {
   
   const [activeMenu, setActiveMenu] = useState(null);

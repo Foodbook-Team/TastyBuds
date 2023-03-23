@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import './components/ChineseRecipe.css'
 import { makeStyles } from "@material-ui/core/styles";
-
+import ItalianPic from './assets/Italian.jpg';
 
 const useStyles = makeStyles({
   listItem: {
@@ -38,7 +38,7 @@ function Italian() {
     return (<>
 <div className="card-flags" id="italian-cuisine">
 <div className="card mb-3" style={{width: "50%"}}>
-  <img className="card-img-top" src="./Italian.jpg" alt="Card cap"></img>
+  <img className="card-img-top" src={ItalianPic} alt="Card cap"></img>
   <div className="card-body">
     <h5 className="card-title">Italian</h5>
     <p className="card-text">Embark on a sensory voyage through the aromatic 
