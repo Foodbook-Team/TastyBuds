@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from "./components/Footer";
 import './MediaCard.css'
 import Quotes from './components/Quotes';
@@ -7,26 +8,28 @@ import ShoppingList from './components/ShoppingList.js'
 import CustomNavbar from './components/CustomNavbar';
 import Body from './components/Body';
 import Video from './components/Video'
-import Home from'./components/Home';
+import Home from './components/Home';
+import Breakfast from './components/pages/Breakfast';
 
 function App() {
-  
+
   return (
 
     // -------------Start of div container-----------------
     <>
 
-      
-        <Quotes />
-        <CustomNavbar />
-        <Video />
-        
 
-          
-          
-
+      <Quotes />
+      <CustomNavbar />
+      <Router>
+      <Routes>
+        <Route path="/breakfast" element={<Breakfast/>}/>
+      </Routes>
+      </Router>
+      <Video />
       <CuisineList />
-      <Home />
+      <Body />
+      <Home />      
       <ShoppingList />
       <Footer />
       {/* ----------Finish of container----------------   */}

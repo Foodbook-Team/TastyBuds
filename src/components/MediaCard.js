@@ -15,10 +15,11 @@ import { minHeight } from '@mui/system';
 
 
 
-const Recipe = ({ title, calories, image, ingredients, url, dishType, dietLabels, cuisineType }) => {
+const Recipe = ({ title, calories, image, ingredients, url, dishType, dietLabels, cuisineType, }) => {
 
   return (
     <>
+    
       <div className='media-card'>
         <Card sx={{ maxWidth: 250}}>
           <CardMedia
