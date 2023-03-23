@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Button from '@mui/joy/Button';
+import './ShoppingList.css'
 
 function ShoppingList() {
   const [items, setItems] = useState([]);
@@ -22,20 +24,32 @@ function ShoppingList() {
   };
 
   return (
-    <div>
+    <div className='header2'>
       <form onSubmit={handleFormSubmit}>
         <h1>Shopping list</h1>
-        <input type="text" value={inputValue} onChange={handleInputChange} />
-        <button type="submit">Add</button>
+        <input type="text" value={inputValue} placeholder="Add ingredients..." onChange={handleInputChange} />
+        
+        <Button
+            color="primary"
+            type="submit"
+            size="sm"
+            variant="outlined"
+            sx={{ marginLeft: '8px'}}
+            
+            
+          >Add</Button>
+
       </form>
+      <div className='header3'>
       <ul>
         {items.map((item, index) => (
           <li style={{color: "black"}} key={index}>
             {item}
-            <button onClick={() => handleItemRemove(index)}>Remove</button>
+            <button className='button' onClick={() => handleItemRemove(index)}>X</button>
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }

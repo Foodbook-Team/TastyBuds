@@ -19,11 +19,11 @@ function App() {
         <CustomNavbar />
         <Video />
       <Home />
-      <ShoppingList />
  <Chinese />
  <Italian />
  <Greek />
  <KitchenCard />
+      <ShoppingList />
       <Footer />
     </>
   );

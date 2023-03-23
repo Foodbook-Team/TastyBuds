@@ -36,7 +36,7 @@ function Home() {
 
   return (
     <>
-    <h1>Check out great {query} recepies:</h1>
+    <h1>Check out great {query} recipes:</h1>
       <hr></hr>
       <div className="input-field">
         <form onSubmit={updateQuery}>
