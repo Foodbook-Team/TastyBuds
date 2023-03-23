@@ -73,7 +73,8 @@ const CustomNavbar = () => {
     <Navbar expand="lg" className="custom-navbar navbar-dark">
       <Container>
         <Navbar.Brand href="#">
-          <img src="6.png" alt="Logo" className="brand-logo" /> Tasty Buds
+          
+          Tasty Buds
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

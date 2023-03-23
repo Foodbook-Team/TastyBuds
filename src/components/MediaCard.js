@@ -24,14 +24,14 @@ const Recipe = ({ title, calories, image, ingredients, url, dishType, dietLabels
 
           />
           <CardContent sx={{minHeight: 225}}>
-            <Typography gutterBottom center variant="h8" align="center" component="div">
+            <Typography gutterBottom variant="h8" align="center" component="div">
               <h1 style={{ fontSize: "1.3rem" }}> {title}</h1>
               <br></br>
-              <p style={{ fontSize: "1rem", margin: "2px", display: "flex", justifyContent: "space-around" }}>
+              <div style={{ fontSize: "1rem", margin: "2px", display: "flex", justifyContent: "space-around" }}>
                 {dishType}
                 <br></br>
                 {dietLabels}
-              </p>
+              </div>
             </Typography>
           </CardContent>
 
@@ -46,10 +46,10 @@ const Recipe = ({ title, calories, image, ingredients, url, dishType, dietLabels
 
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <div>
                 <ol>
-                  {ingredients && ingredients.map((ingredient) => (
-                    <li style={{ color: "black" }}>{ingredient.text}</li>
+                  {ingredients && ingredients.map((ingredient, index) => (
+                    <li style={{ color: "black" }} key={index}>{ingredient.text}</li>
                   ))}</ol>
                 <br></br>
                 Calories: {calories}
@@ -61,7 +61,7 @@ const Recipe = ({ title, calories, image, ingredients, url, dishType, dietLabels
                     <Button component={Link} to={url} target="_blank">Recipe</Button>
                   </BrowserRouter>
                 </CardActions>
-              </Typography>
+              </div>
             </AccordionDetails>
           </Accordion>
         </Card>

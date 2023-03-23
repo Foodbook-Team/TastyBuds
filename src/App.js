@@ -9,6 +9,7 @@ import Home from'./components/Home';
 import Chinese from './ChineseRecipes.js'
 import Italian from './ItalianRecipes.js'
 import Greek from './GreekRecipes.js'
+import KitchenCard from './KitchenCard';
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
  <Chinese />
  <Italian />
  <Greek />
+ <KitchenCard />
       <Footer />
     </>
   );

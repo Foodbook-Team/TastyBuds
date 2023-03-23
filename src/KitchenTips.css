@@ -1,0 +1,19 @@
+.tips-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.card-img-top{
+    height: 400px;
+}
+.header{
+   display: flex ;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   margin-top: 15px;
+   flex-wrap: wrap;
+}

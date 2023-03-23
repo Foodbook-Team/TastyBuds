@@ -15,7 +15,6 @@ const useStyles = makeStyles({
   }
 });
 
-
 function Greek() {
   const classes = useStyles();
     const [recipes, setRecipes] = useState([]);
@@ -36,11 +35,11 @@ function Greek() {
   
     return (<>
 <div className="card-flags" id="greek-cuisine">
-<div class="card mb-3" style={{width: "50%"}}>
-  <img class="card-img-top" src="./Greek.jpg" alt="Card image cap"></img>
-  <div class="card-body">
-    <h5 class="card-title">Greek</h5>
-    <p class="card-text">Uncover the sun-kissed charm of Greek cuisine, 
+<div className="card mb-3" style={{width: "50%"}}>
+  <img className="card-img-top" src="./Greek.jpg" alt="Card cap"></img>
+  <div className="card-body">
+    <h5 className="card-title">Greek</h5>
+    <p className="card-text">Uncover the sun-kissed charm of Greek cuisine, 
 where the freshest ingredients and time-honoured 
 techniques create a medley of mouth-watering 
 flavours. From tender, slow-cooked meats to crisp, 
@@ -64,13 +63,13 @@ delectable morsel.</p>
               <Typography gutterBottom variant="h5" component="div">
                 {recipe.recipe.label}
               </Typography>
-              <Typography  variant="body2">
+              <div  variant="body2">
                 <ul>
                   {recipe.recipe.ingredientLines.map((ingredient) => (
                     <li className={classes.listItem} key={ingredient}>{ingredient}</li>
                   ))}
                 </ul>
-              </Typography>
+              </div>
             </CardContent>
           </CardActionArea>
         </Card>
