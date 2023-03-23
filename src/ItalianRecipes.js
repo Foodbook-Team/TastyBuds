@@ -16,14 +16,15 @@ const useStyles = makeStyles({
 });
 
 
-function Chinese() {
+function Italian() {
   const classes = useStyles();
     const [recipes, setRecipes] = useState([]);
   
     useEffect(() => {
     const APP_ID = "31e49968"
     const APP_KEY = "ecdd8eae17634d382403cbce72038924"
-  const query = "chinese"
+    const query = "italian"
+
       const fetchRecipes = async () => {
         const response = await fetch(
           `api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`
@@ -35,17 +36,17 @@ function Chinese() {
     }, []);
   
     return (<>
-<div className="card-flags" id="chinese-cuisine">
+<div className="card-flags" id="italian-cuisine">
 <div class="card mb-3" style={{width: "50%"}}>
-  <img class="card-img-top" src="./Chinese.jpg" alt="Card image cap"></img>
+  <img class="card-img-top" src="./Italian.jpg" alt="Card image cap"></img>
   <div class="card-body">
-    <h5 class="card-title">Chinese</h5>
-    <p class="card-text">Savour the hearty comfort of English cuisine, where 
-traditional flavours mingle with modern flair, 
-whisking you away on a culinary adventure. Delight 
-in the rich tapestry of dishes, from the classic full 
-English breakfast to the sumptuous Sunday roast, an 
-unforgettable gastronomic journey awaits.</p>
+    <h5 class="card-title">Italian</h5>
+    <p class="card-text">Embark on a sensory voyage through the aromatic 
+world of Indian cuisine, where a kaleidoscope of 
+spices and flavours dance in harmony. From sizzling 
+tandoori delights to indulgent curries, each dish 
+weaves a rich tapestry of taste, offering a symphony 
+of culinary experiences that captivate the palate.</p>
   </div>
 </div>
 </div>
@@ -80,4 +81,4 @@ unforgettable gastronomic journey awaits.</p>
     );
   }
   
-  export default Chinese;
+  export default Italian;

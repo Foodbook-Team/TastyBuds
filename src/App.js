@@ -7,11 +7,12 @@ import CustomNavbar from './components/CustomNavbar';
 import Video from './components/Video'
 import Home from'./components/Home';
 import Chinese from './ChineseRecipes.js'
+import Italian from './ItalianRecipes.js'
+import Greek from './GreekRecipes.js'
+
 function App() {
   
   return (
-
-    // -------------Start of div container-----------------
     <>
         <Quotes />
         <CustomNavbar />
@@ -19,10 +20,10 @@ function App() {
       <Home />
       <ShoppingList />
  <Chinese />
+ <Italian />
+ <Greek />
       <Footer />
-      {/* ----------Finish of container----------------   */}
     </>
-
   );
 }
 

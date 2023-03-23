@@ -16,14 +16,14 @@ const useStyles = makeStyles({
 });
 
 
-function Chinese() {
+function Greek() {
   const classes = useStyles();
     const [recipes, setRecipes] = useState([]);
   
     useEffect(() => {
     const APP_ID = "31e49968"
     const APP_KEY = "ecdd8eae17634d382403cbce72038924"
-  const query = "chinese"
+  const query = "greek"
       const fetchRecipes = async () => {
         const response = await fetch(
           `api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`
@@ -35,17 +35,18 @@ function Chinese() {
     }, []);
   
     return (<>
-<div className="card-flags" id="chinese-cuisine">
+<div className="card-flags" id="greek-cuisine">
 <div class="card mb-3" style={{width: "50%"}}>
-  <img class="card-img-top" src="./Chinese.jpg" alt="Card image cap"></img>
+  <img class="card-img-top" src="./Greek.jpg" alt="Card image cap"></img>
   <div class="card-body">
-    <h5 class="card-title">Chinese</h5>
-    <p class="card-text">Savour the hearty comfort of English cuisine, where 
-traditional flavours mingle with modern flair, 
-whisking you away on a culinary adventure. Delight 
-in the rich tapestry of dishes, from the classic full 
-English breakfast to the sumptuous Sunday roast, an 
-unforgettable gastronomic journey awaits.</p>
+    <h5 class="card-title">Greek</h5>
+    <p class="card-text">Uncover the sun-kissed charm of Greek cuisine, 
+where the freshest ingredients and time-honoured 
+techniques create a medley of mouth-watering 
+flavours. From tender, slow-cooked meats to crisp, 
+refreshing salads, each dish is a celebration of the 
+Mediterranean spirit, inviting you to savour every 
+delectable morsel.</p>
   </div>
 </div>
 </div>
@@ -80,4 +81,4 @@ unforgettable gastronomic journey awaits.</p>
     );
   }
   
-  export default Chinese;
+  export default Greek;
