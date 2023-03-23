@@ -18,7 +18,6 @@ video {
   justify-content: center;
   align-items: center;
   color: white;
-
   letter-spacing: 2px;
   font-weight: 600;
   font-size: 3.4375rem;
@@ -44,4 +43,37 @@ background-color: rgba(0,0,0,.2);
 }
 .welcome {
   text-shadow: 5px 5px 10px black;
+}
+
+
+.content{
+  
+  font-size: 2rem;
+}
+
+@media (max-width: 1000px){
+  .content p{
+    font-size: 1.2rem;
+    position: relative;
+    top: -90%;
+   
+  }
+}
+
+
+@media (max-width: 800px){
+  .content p{
+    font-size: .9rem;
+    position: relative;
+    top: -130%;
+   
+  }
+}
+@media (max-width: 390px){
+  .content p{
+    font-size: .5rem;
+    position: relative;
+    top: -250%;
+   
+  }
 }

@@ -30,7 +30,7 @@ function ShoppingList() {
       </form>
       <ul>
         {items.map((item, index) => (
-          <li key={index}>
+          <li style={{color: "black"}} key={index}>
             {item}
             <button onClick={() => handleItemRemove(index)}>Remove</button>
           </li>
