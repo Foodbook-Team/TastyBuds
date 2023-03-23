@@ -9,7 +9,6 @@ import CustomNavbar from './components/CustomNavbar';
 import Body from './components/Body';
 import Video from './components/Video'
 import Home from './components/Home';
-import Breakfast from './components/pages/Breakfast';
 
 function App() {
 
@@ -20,12 +19,7 @@ function App() {
 
 
       <Quotes />
-      <CustomNavbar />
-      <Router>
-      <Routes>
-        <Route path="/breakfast" element={<Breakfast/>}/>
-      </Routes>
-      </Router>
+      <CustomNavbar />      
       <Video />
       <CuisineList />
       <Body />
