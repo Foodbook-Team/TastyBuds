@@ -1,70 +1,91 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# Tasty Buds
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Description
+#
+Welcome to TastyBuds, your ultimate online destination for discovering delicious recipes and valuable food information. We are dedicated to providing a user-friendly platform where you can explore, create, and share your culinary adventures. Whether you're an experienced chef or just starting your journey in the kitchen, TastyBuds has something for everyone.
+Features
 
-### `npm start`
+1.	Curated Recipes: Discover thousands of handpicked recipes from around the world, with detailed instructions, images, and preparation times. Our advanced search options allow you to filter by cuisine, dish type, ingredients, dietary preferences, and more.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2.	Nutrition Information: Stay informed about the nutritional content of your meals. Each recipe comes with a detailed nutritional breakdown, including calories, macronutrients, and micronutrients, so you can make informed choices about your diet.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3.	Interactive Meal Planner: Organize your meals and grocery lists with our user-friendly meal planner. Simply drag and drop your desired recipes into your meal plan, and our platform will generate a comprehensive shopping list for your convenience.
 
-### `npm test`
+4.	User Profiles & Recipe Collections: Create your personalized profile to save your TastyBuds recipes, organize them into custom collections, and share them with friends and family. You can also rate, review, and upload your own recipes to contribute to the TastyBuds community.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5.	Cooking Tips & Techniques: Enhance your culinary skills with our extensive library of cooking tips, tutorials, and videos. Learn basic techniques, knife skills, and more to build confidence and expertise in the kitchen.
 
-### `npm run build`
+6.	Food Glossary: Expand your food knowledge with our comprehensive food glossary, featuring detailed descriptions of ingredients, cooking techniques, and kitchen tools. This resource is perfect for both novice and experienced cooks looking to broaden their culinary horizons.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7.	Community Forums: Connect with fellow food enthusiasts by participating in our community forums. Discuss recipe ideas, cooking tips, and food-related topics with like-minded individuals from around the world.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+8.	Seasonal & Holiday Recipes: Get inspired by our carefully curated seasonal and holiday recipe collections. From festive treats to summer BBQs, we've got you covered for any occasion.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+9.	Mobile App: Access Gourmet TastyBuds Haven on-the-go with our easy-to-use mobile app, available for both iOS and Android devices. Browse recipes, create shopping lists, and save your favourites right from your smartphone or tablet.
+Join TastyBuds today and unleash your inner chef! Happy cooking!
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ![](../TastyBuds/src/assets/Tasty%20Buds%20Screenshot.png)
+## Table of Contents
+#
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+<br>
+<br>
+## Installation
+#
 
-## Learn More
+<br>
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
+#
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+## License
+#
+### This roject is covered under the
+* The MIT License
+<br>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
+#
+Pleasse contact the developers through GitHub
+<br>
+<br>
 
-### Analyzing the Bundle Size
+## Tests
+#
+Contact the Developers through GitHub
+<br>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Questions
+#
 
-### Making a Progressive Web App
+### GitHub repository for the developer:
+- https://github.com/Foodbook-Team/TastyBuds
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Contact details:
+- GitHub: Foodbook-Team
+<br>
+<br>
+<br>
+<br>
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### <center>QByter 2023</center>
