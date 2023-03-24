@@ -7,6 +7,7 @@ import { CardActionArea } from "@mui/material";
 import "./components/ChineseRecipe.css";
 import { makeStyles } from "@material-ui/core/styles";
 import ChinesePic from './assets/Chinese.jpg';
+import axios from 'axios'; 
 
 const useStyles = makeStyles({
   listItem: {
@@ -19,15 +20,19 @@ function Chinese() {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    const APP_ID = "31e49968";
-    const APP_KEY = "ecdd8eae17634d382403cbce72038924";
-    const query = "chinese";
+    const options = {
+      method: 'GET',
+      url: 'https://edamam-recipe-search.p.rapidapi.com/search',
+      params: {q: 'chinese'},
+      headers: {
+        'X-RapidAPI-Key': '3305c8d758msh96587b8a3306f7ep1d1bafjsn300995769472',
+        'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
+      }
+    };
+
     const fetchRecipes = async () => {
-      const response = await fetch(
-        `api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`
-      );
-      const data = await response.json();
-      setRecipes(data.hits);
+      const response = await axios.request(options);
+      setRecipes(response.data.hits);
     };
     fetchRecipes();
   }, []);

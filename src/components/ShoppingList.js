@@ -27,7 +27,7 @@ function ShoppingList() {
     <div>
       <div className="header2">
         <form onSubmit={handleFormSubmit}>
-          <h4 className="buttonTitle">Creat a shopping list for your favourite recipe</h4>
+          <h4 className="buttonTitle">Create a shopping list for your favorite recipe</h4>
           <input
             type="text"
             value={inputValue}
