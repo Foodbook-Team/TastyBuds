@@ -33,7 +33,7 @@ const Video = () => {
         <h1 >Welcome</h1>
         <p id="para">To Tasty Buds</p>
         <p >The No.1 website for recipes and meal ideas</p>
-        <p >A heaven for your taste buds</p>
+        <p className="paraitalic">a heaven for your taste buds</p>
         </div>
       </motion.div>
     </motion.div>

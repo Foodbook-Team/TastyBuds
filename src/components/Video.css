@@ -43,7 +43,10 @@ video {
   padding-top: 15%;
   text-shadow: 5px 5px 10px black;
 }
-
+.paraitalic{
+  
+  font-style: italic;
+}
 
 .content{
   
