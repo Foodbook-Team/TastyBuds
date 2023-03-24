@@ -15,8 +15,8 @@ function Home() {
     getRecipe();
   }, [query]);
 
-  const APP_ID = "31e49968";
-  const APP_KEY = "ecdd8eae17634d382403cbce72038924";
+  const APP_ID = "2f6ec626";
+  const APP_KEY = "801cdf6fc0f634c6ec5e368746ad51e4";
 
   const getRecipe = async () => {
     const response = await axios.get(
