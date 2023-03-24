@@ -4,6 +4,7 @@ import axios from "axios";
 import Recipe from "../components/MediaCard";
 import Button from "@mui/joy/Button";
 import Input from "@mui/material/Input";
+import KitchenTips from '../KitchenTips.css'
 // import Tilt from 'react-vanilla-tilt';
 
 function Home() {
@@ -60,8 +61,9 @@ function Home() {
             Search
           </Button>
         </form>
-        <div className="dailyheader">
-          <h2 className="chheader">
+        {/* <div className="dailyheader"> */}
+        <div className="headerchickdiv">
+          <h2 className="headerchick">
             Our {query} recipes of the day
           </h2>
         </div>

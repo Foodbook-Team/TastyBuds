@@ -1,10 +1,13 @@
 .header2{
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin-bottom: 25px;
+   /* border-top: 1px solid lightgray; */
+    /* background-color: whitesmoke; */
 }
 .header3 ul li {
     display: flex;
@@ -15,4 +18,28 @@
 .button{
     margin-left: 10px;
     background-color: rgb(236, 127, 11);
+}
+
+
+.shoopingList {
+
+background: yellow;
+
+width: 85px;
+
+}
+.buttonTitle{
+    margin-bottom: 15px;
+}
+
+form {
+
+    text-align: center;
+}
+.badgeholder {
+
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 20px;
+
 }
