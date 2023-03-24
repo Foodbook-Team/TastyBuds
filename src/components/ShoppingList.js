@@ -38,8 +38,8 @@ function ShoppingList() {
             
             
           >Add</Button>
-
       </form>
+
       <div className='header3'>
       <ul>
         {items.map((item, index) => (
@@ -50,6 +50,7 @@ function ShoppingList() {
         ))}
       </ul>
       </div>
+      <div id="edamam-badge" data-color="white"></div>
     </div>
   );
 }
