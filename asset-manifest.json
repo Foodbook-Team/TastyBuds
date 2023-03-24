@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TastyBuds/static/css/main.1cc7978a.css",
-    "main.js": "/TastyBuds/static/js/main.364437c4.js",
+    "main.js": "/TastyBuds/static/js/main.d253a53e.js",
     "static/media/video8.mp4": "/TastyBuds/static/media/video8.347626fe6e60963c6717.mp4",
     "static/media/Greek.jpg": "/TastyBuds/static/media/Greek.94be65198c1355504b39.jpg",
     "static/media/Chinese.jpg": "/TastyBuds/static/media/Chinese.85c52fda3258fcd76844.jpg",
@@ -15,10 +15,10 @@
     "static/media/framer.webp": "/TastyBuds/static/media/framer.038ad3a46c0c443a4752.webp",
     "index.html": "/TastyBuds/index.html",
     "main.1cc7978a.css.map": "/TastyBuds/static/css/main.1cc7978a.css.map",
-    "main.364437c4.js.map": "/TastyBuds/static/js/main.364437c4.js.map"
+    "main.d253a53e.js.map": "/TastyBuds/static/js/main.d253a53e.js.map"
   },
   "entrypoints": [
     "static/css/main.1cc7978a.css",
-    "static/js/main.364437c4.js"
+    "static/js/main.d253a53e.js"
   ]
 }
