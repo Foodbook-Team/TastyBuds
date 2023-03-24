@@ -30,8 +30,8 @@ const Video = () => {
         transition={{ delay: 0.5 }}
       >
         <div className="welcome">
-        <p >Welcome</p>
-        <p >To Tasty Buds</p>
+        <h1 >Welcome</h1>
+        <p id="para">To Tasty Buds</p>
         <p >The No.1 website for recipes and meal ideas</p>
         <p >A heaven for your taste buds</p>
         </div>

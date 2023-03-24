@@ -28,7 +28,7 @@ const quotes = [
         }, []);
 
   return (
-    <div className="header" style={{fontSize: "2rem"}}>
+    <div className="headerQuote">
       <p>{randomQuote}</p>
     </div>
   );

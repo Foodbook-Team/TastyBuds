@@ -11,6 +11,8 @@ import Italian from './ItalianRecipes.js'
 import Greek from './GreekRecipes.js'
 import KitchenCard from './KitchenCard';
 
+
+
 function App() {
 
   return (
@@ -18,7 +20,7 @@ function App() {
         <Quotes />
         <CustomNavbar />
         <Video />
-      <Home />
+        <Home />
  <Chinese />
  <Italian />
  <Greek />
