@@ -18,22 +18,28 @@ const useStyles = makeStyles({
 
 function Italian() {
   const classes = useStyles();
-    const [recipes, setRecipes] = useState([]);
-  
-    useEffect(() => {
-    const APP_ID = "31e49968"
-    const APP_KEY = "ecdd8eae17634d382403cbce72038924"
-    const query = "italian"
+  const [recipes, setRecipes] = useState([]);
 
-      const fetchRecipes = async () => {
-        const response = await fetch(
-          `api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`
-        );
-        const data = await response.json();
-        setRecipes(data.hits);
-      };
-      fetchRecipes();
-    }, []);
+  useEffect(() => {
+    const APP_ID = "31e49968";
+    const APP_KEY = "ecdd8eae17634d382403cbce72038924";
+    const query = "italian";
+
+    const fetchRecipes = async () => {
+      const response = await fetch(
+        "https://edamam-recipe-search.p.rapidapi.com/search?q=" + query,
+        {
+          headers: {
+            "X-RapidAPI-Key": "3305c8d758msh96587b8a3306f7ep1d1bafjsn300995769472",
+            "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com"
+          }
+        }
+      );
+      const data = await response.json();
+      setRecipes(data.hits);
+    };
+    fetchRecipes();
+  }, []);
   
     return (<>
 <div className="card-flags" id="italian-cuisine">
