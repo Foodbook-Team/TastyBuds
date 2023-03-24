@@ -2,11 +2,6 @@ import React, {useState} from "react";
 import KitchenTips from "./KitchenTips.js";
 import './KitchenTips.css'
 
-
-
-
-
-
 function KitchenCard() {
 
 const [tips, useTips] = useState(
@@ -42,7 +37,7 @@ const [tips, useTips] = useState(
   return (
     <>
    
-      <div style={{ fontSize: "2rem" }}>
+      <div id="chop-vegetables-tips" style={{ fontSize: "2rem" }}>
       <div className="header" style={{fontSize: "2rem"}}>
         <p>Top 6 Kitchen Tips for Efficient and Enjoyable Cooking</p>
    

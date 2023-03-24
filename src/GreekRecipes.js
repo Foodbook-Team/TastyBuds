@@ -17,24 +17,26 @@ const useStyles = makeStyles({
 function Greek() {
   const classes = useStyles();
   const [recipes, setRecipes] = useState([]);
-  const [query, setQuery] = useState("");
 
   useEffect(() => {
-    const APP_ID = "31e49968"
-    const APP_KEY = "ecdd8eae17634d382403cbce72038924"
-    const searchTerms = ["greek", "mediterranean", "feta cheese", "tzatziki", "souvlaki"];
-    const randomIndex = Math.floor(Math.random() * searchTerms.length);
-    setQuery(searchTerms[randomIndex]);
-    
+
+    const query = "Greek";
+
     const fetchRecipes = async () => {
       const response = await fetch(
-        `api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`
+        "https://edamam-recipe-search.p.rapidapi.com/search?q=" + query,
+        {
+          headers: {
+            "X-RapidAPI-Key": "3305c8d758msh96587b8a3306f7ep1d1bafjsn300995769472",
+            "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com"
+          }
+        }
       );
       const data = await response.json();
       setRecipes(data.hits);
     };
     fetchRecipes();
-  }, [query]);
+  }, []);
   
   return (<>
     <div className="card-flags" id="greek-cuisine">

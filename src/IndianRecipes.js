@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import './components/ChineseRecipe.css'
 import { makeStyles } from "@material-ui/core/styles";
-import ItalianPic from './assets/Italian.jpg';
+import IndianPic from './assets/Indian.jpg';
 
 const useStyles = makeStyles({
   listItem: {
@@ -15,13 +15,12 @@ const useStyles = makeStyles({
   }
 });
 
-
-function Italian() {
+function Indian() {
   const classes = useStyles();
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    const query = "italian";
+    const query = "indian";
 
     const fetchRecipes = async () => {
       const response = await fetch(
@@ -40,11 +39,11 @@ function Italian() {
   }, []);
   
     return (<>
-<div className="card-flags" id="italian-cuisine">
+<div className="card-flags" id="indian-cuisine">
 <div className="card mb-3" style={{width: "50%"}}>
-  <img className="card-img-top" src={ItalianPic} alt="Card cap"></img>
+  <img className="card-img-top" src={IndianPic} alt="Card cap"></img>
   <div className="card-body">
-    <h5 className="card-title">Italian</h5>
+    <h5 className="card-title">Indian</h5>
     <p className="card-text">Embark on a sensory voyage through the aromatic 
 world of Indian cuisine, where a kaleidoscope of 
 spices and flavours dance in harmony. From sizzling 
@@ -85,4 +84,4 @@ of culinary experiences that captivate the palate.</p>
     );
   }
   
-  export default Italian;
+  export default Indian;

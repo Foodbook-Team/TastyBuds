@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import "./components/ChineseRecipe.css";
 import { makeStyles } from "@material-ui/core/styles";
-import ChinesePic from './assets/Chinese.jpg';
+import EnglishPic from './assets/English.jpg';
 import axios from 'axios'; 
 
 const useStyles = makeStyles({
@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-function Chinese() {
+function English() {
   const classes = useStyles();
   const [recipes, setRecipes] = useState([]);
 
@@ -23,7 +23,7 @@ function Chinese() {
     const options = {
       method: 'GET',
       url: 'https://edamam-recipe-search.p.rapidapi.com/search',
-      params: {q: 'chinese'},
+      params: {q: 'english'},
       headers: {
         'X-RapidAPI-Key': '3305c8d758msh96587b8a3306f7ep1d1bafjsn300995769472',
         'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
@@ -39,21 +39,22 @@ function Chinese() {
 
   return (
     <>
-      <div className="card-flags" id="chinese-cuisine">
+      <div className="card-flags" id="english-cuisine">
         <div className="card mb-3" style={{ width: "50%" }}>
           <img
             className="card-img-top"
-            src= {ChinesePic}
-            alt="Card cap"
+            src= {EnglishPic}
+            alt="Card image cap"
           ></img>
           <div className="card-body">
-            <h5 className="card-title">Chinese</h5>
+            <h5 className="card-title">English</h5>
             <p className="card-text">
-              Savour the hearty comfort of English cuisine, where traditional
-              flavours mingle with modern flair, whisking you away on a culinary
-              adventure. Delight in the rich tapestry of dishes, from the
-              classic full English breakfast to the sumptuous Sunday roast, an
-              unforgettable gastronomic journey awaits.
+            Savour the hearty comfort of English cuisine, where 
+traditional flavours mingle with modern flair, 
+whisking you away on a culinary adventure. Delight 
+in the rich tapestry of dishes, from the classic full 
+English breakfast to the sumptuous Sunday roast, an 
+unforgettable gastronomic journey awaits.
             </p>
           </div>
         </div>
@@ -90,4 +91,4 @@ function Chinese() {
   );
 }
 
-export default Chinese;
+export default English;
