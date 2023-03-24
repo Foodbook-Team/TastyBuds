@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TastyBuds/static/css/main.481c8cb0.css",
-    "main.js": "/TastyBuds/static/js/main.c198e492.js",
+    "main.css": "/TastyBuds/static/css/main.e2acef7d.css",
+    "main.js": "/TastyBuds/static/js/main.e7eb9cd5.js",
     "static/media/video8.mp4": "/TastyBuds/static/media/video8.347626fe6e60963c6717.mp4",
     "static/media/Indian.jpg": "/TastyBuds/static/media/Indian.3cf6052fdf01ede7ebc6.jpg",
     "static/media/Greek.jpg": "/TastyBuds/static/media/Greek.94be65198c1355504b39.jpg",
@@ -16,11 +16,11 @@
     "static/media/react.webp": "/TastyBuds/static/media/react.2031ff075fec26480a85.webp",
     "static/media/framer.webp": "/TastyBuds/static/media/framer.038ad3a46c0c443a4752.webp",
     "index.html": "/TastyBuds/index.html",
-    "main.481c8cb0.css.map": "/TastyBuds/static/css/main.481c8cb0.css.map",
-    "main.c198e492.js.map": "/TastyBuds/static/js/main.c198e492.js.map"
+    "main.e2acef7d.css.map": "/TastyBuds/static/css/main.e2acef7d.css.map",
+    "main.e7eb9cd5.js.map": "/TastyBuds/static/js/main.e7eb9cd5.js.map"
   },
   "entrypoints": [
-    "static/css/main.481c8cb0.css",
-    "static/js/main.c198e492.js"
+    "static/css/main.e2acef7d.css",
+    "static/js/main.e7eb9cd5.js"
   ]
 }
