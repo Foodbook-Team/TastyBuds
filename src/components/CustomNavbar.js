@@ -45,7 +45,7 @@ const CustomNavbar = () => {
     {
       title: "Kitchen Tips",
       items: [
-        { id: "chop-vegetables-tips", name: "How to Chop Vegetables" },
+        { id: "chop-vegetables-tips", name: "Six kitchen tips" },
         { id: "roast-chicken-tips", name: "Roast Chicken" },
         { id: "grind-spices-tips", name: "Grind Spices" },
         { id: "kitchen-hygiene-tips", name: "Kitchen Hygiene" },

@@ -10,6 +10,8 @@ import Chinese from './ChineseRecipes.js'
 import Italian from './ItalianRecipes.js'
 import Greek from './GreekRecipes.js'
 import KitchenCard from './KitchenCard';
+import English from './EnglishRecipes.js'
+import Indian from './IndianRecipes.js'
 
 
 
@@ -24,6 +26,8 @@ function App() {
  <Chinese />
  <Italian />
  <Greek />
+ <English />
+ <Indian />
  <KitchenCard />
       <ShoppingList />
       <Footer />
