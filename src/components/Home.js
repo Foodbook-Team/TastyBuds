@@ -45,12 +45,13 @@ function Home() {
 
   return (
     <>
-      <hr></hr>
+      {/* <hr></hr> */}
       <div className="input-field">
         <form onSubmit={updateQuery}>
           <Input
             placeholder="Find the best recipes..."
             type="text"
+            border="solid 2px grey"
             value={search}
             onChange={updateSearch}
           />

@@ -6,6 +6,8 @@ video {
   height: 100%;
   object-fit: cover;
   /* overflow: hidden; */
+  margin-bottom: 25px;
+  box-shadow: rgba(0,0,0) 0px 5.5488px 10px 0px; 
 }
 
 .content {
@@ -23,6 +25,7 @@ video {
   letter-spacing: 2px;
   font-weight: 400;
   font-size: 40px;
+
 }
 
 
