@@ -4,7 +4,7 @@
 
 ## Description
 
-#
+<hr>
 
 Welcome to TastyBuds, your ultimate online destination for discovering delicious recipes and valuable food information. We are dedicated to providing a user-friendly platform where you can explore, create, and share your culinary adventures. Whether you're an experienced chef or just starting your journey in the kitchen, TastyBuds has something for everyone.
 Features
@@ -34,7 +34,7 @@ Features
 
 ## Table of Contents
 
-#
+<hr>
 
 - [Description](#description)
 - [Installation](#installation)
@@ -48,7 +48,7 @@ Features
 
 ## Installation
 
-#
+<hr>
 
 TASTY BUDS are user friendly web application with no need of any sophisticated software installations. All you need is just your favourite web browser.
 <br>
@@ -56,7 +56,7 @@ TASTY BUDS are user friendly web application with no need of any sophisticated s
 
 ## Usage
 
-#
+<hr>
 
 Enter the URL into you browser and surf away!!
 
@@ -64,7 +64,7 @@ Enter the URL into you browser and surf away!!
 
 ## License
 
-#
+<hr>
 
 ### This roject is covered under the
 
@@ -74,32 +74,50 @@ Enter the URL into you browser and surf away!!
 
 ## Contributing
 
-#
+<hr>
 
-Pleasse contact the developers through GitHub
+### Please contact the developers through GitHub
 <br>
 <br>
 
 ## Tests
 
-#
+<hr>
 
-Contact the Developers through GitHub
+### Contact the Developers through GitHub
 <br>
 <br>
 
 ## Questions
 
-#
+<hr>
 
 ### GitHub repository for the developer:
 
 - https://github.com/Foodbook-Team/TastyBuds
   <br>
+### Deployed Link
+- https://foodbook-team.github.io/TastyBuds/
+
+### Developers
+<hr>
+
+### Shahid Hussain
+
+- https://github.com/QByter
+
+### Wlodzimierz Maciaszczyk
+- https://github.com/WloMac
+
+### Mariusz Ruczkowski
+- https://github.com/gines18/
+
 
 ### Contact details:
+<hr>
 
-- GitHub: Foodbook-Team
+GitHub: Foodbook-Team
+- https://github.com/Foodbook-Team/TastyBuds
   <br>
   <br>
   <br>
