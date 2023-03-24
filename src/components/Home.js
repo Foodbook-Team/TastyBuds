@@ -16,14 +16,20 @@ function Home() {
     getRecipe();
   }, [query]);
 
-  const APP_ID = "2f6ec626";
-  const APP_KEY = "801cdf6fc0f634c6ec5e368746ad51e4";
 
   const getRecipe = async () => {
-    const response = await axios.get(
-      `/api/recipes/v2/?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&type=public`
-    );
-
+    const options = {
+      method: 'GET',
+      url: 'https://edamam-recipe-search.p.rapidapi.com/search',
+      params: { q: query },
+      headers: {
+        'X-RapidAPI-Key': '3305c8d758msh96587b8a3306f7ep1d1bafjsn300995769472',
+        'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
+      }
+    };
+  
+    const response = await axios.request(options);
+  
     setRecipe(response.data.hits);
     console.log(response.data.hits);
   };
